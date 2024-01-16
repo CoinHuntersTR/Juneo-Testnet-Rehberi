@@ -22,7 +22,7 @@ cd juneojs-examples
 ```
 npm install
 ```
-### Binary ve ayarlamaları yapıyoruz.
+### Ayarlamaları yapıyoruz.
 
 ```
 nano .env
