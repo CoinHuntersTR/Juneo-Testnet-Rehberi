@@ -62,11 +62,20 @@ const durationInDays: number = 4 // number of days you will validate your Supern
 npx ts-node ./src/supernet/addSupernetValidator.ts
 ```
 
-### Node Konfigürasyonunu Güncelleme
-Ana dizine dönüyoruz.
+### Node'muzu durduruyoruz. 
+Önce Ana dizine dönüyyoruz.
 ```
 cd
 ```
+* Screen'imizin içine giriyoruz.
+```
+screen -r juneo
+```
+Ctrl C ile durduruyoruz.
+Sonrasında Ctrl A+D ile screenden çıkıyoruz.
+
+### Node Konfigürasyonunu Güncelleme
+
 ```
 nano config.json
 ```
@@ -82,7 +91,6 @@ nano config.json
 ```
 screen -r juneo
 ```
-Ctrl C ile durduruyoruz. 
 
 Tekrar başlatmak için aşağıdaki komutu giriyoruz.
 ```
