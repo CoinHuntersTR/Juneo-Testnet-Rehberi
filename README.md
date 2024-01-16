@@ -68,7 +68,10 @@ screen -S juneo
 
 ### Gerekli olan portları açalım
 ```
-sudo ufw allow enable
+sudo ufw allow 22
+```
+```
+sudo ufw enable
 ```
 ```
 sudo ufw allow 9650
