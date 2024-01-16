@@ -107,5 +107,11 @@ curl -X POST --data '{
 Bundan sonra eğer validator olarak seçildiyseniz size özel oluşturulan Telegram grubundan yada özel olarak alındığınız gruptan Test tokenleri talep edeceksiniz.
 
 * Test token talep etmek için [Wallet oluşturma](https://www.mcnwallet.io/) adresinden cüzdan oluşturup gizli kelimelerinizi saklamayı unutmayın.
+
+# Validator Çalıştırma
+
+* Test tokenlerini ekipten temin ettikten sonra
+
+  ![image](https://840243940-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FspM3Ad3lkZXu7Y9fdc1P%2Fuploads%2FOkpYyggv4s88b2tkb4zr%2Fimage.png?alt=media&token=764238b7-4912-4093-8c74-5366ec87adde)
   
 
