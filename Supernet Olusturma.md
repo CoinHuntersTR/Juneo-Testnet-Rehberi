@@ -63,7 +63,10 @@ npx ts-node ./src/supernet/addSupernetValidator.ts
 ```
 
 ### Node Konfigürasyonunu Güncelleme
-
+Ana dizine dönüyoruz.
+```
+cd
+```
 ```
 nano config.json
 ```
@@ -75,6 +78,14 @@ nano config.json
 * Bu düzenleme sonrasında ctrl X Y enter yapıyoruz.
 
 ### Node tekrar başlatıyoruz.
+
 ```
-systemctl restart juneogo.service
+screen -r juneo
 ```
+Ctrl C ile durduruyoruz. 
+
+Tekrar başlatmak için aşağıdaki komutu giriyoruz.
+```
+./juneogo --config-file="./config.json"
+```
+loglar akmaya başladığında Ctrl A + D ile çıkıyoruz. 
