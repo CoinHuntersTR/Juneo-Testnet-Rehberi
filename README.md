@@ -1,6 +1,6 @@
-<h1 align="center"> Avail Node Rehberi
+<h1 align="center"> Juneo Node Rehberi
   
-![image](https://pbs.twimg.com/profile_banners/1508458204866486283/1687262602/1500x500)
+![image](https://pbs.twimg.com/profile_banners/1660583355539128320/1684749264/1500x500)
 
 ## Sistem gereksinimleri:
 ### Ubunutu 22.04
