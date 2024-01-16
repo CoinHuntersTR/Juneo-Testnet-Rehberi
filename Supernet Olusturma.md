@@ -74,37 +74,7 @@ nano config.json
 ```
 * Bu düzenleme sonrasında ctrl X Y enter yapıyoruz.
 
-### Loglar akmaya başladığında Ctrl A+D ile çıkıyoruz.
-
-### Gerekli olan portları açalım
+### Node tekrar başlatıyoruz.
 ```
-sudo ufw allow enable
-```
-```
-sudo ufw allow 9650
-```
-```
-sudo ufw allow 9651 
-```
-### Node işleşmesi için aşağıdaki komutu giriyoruz sonucunda "True" çıktısı aldıysanız işlem tamamdır. False çıktısı aldıysanız beklemeye devam edin.
-```
-curl -X POST --data '{
-    "jsonrpc":"2.0",
-    "id"     :1,
-    "method" :"info.isBootstrapped",
-    "params": {
-        "chain":"JUNE"
-    }
-}' -H 'content-type:application/json;' 127.0.0.1:9650/ext/info
-```
-
-### Node-ID öğrenme
-
-* Aşağıdaki komutu çalıştırarak size lazım olan Node-ID'nizi öğrenebilirsiniz.
-```
-curl -X POST --data '{
-    "jsonrpc":"2.0",
-    "id"     :1,
-    "method" :"info.getNodeID"
-}' -H 'content-type:application/json' 127.0.0.1:9650/ext/info
+systemctl restart juneogo.service
 ```
