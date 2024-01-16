@@ -63,10 +63,7 @@ npx ts-node ./src/supernet/addSupernetValidator.ts
 ```
 
 ### Node'muzu durduruyoruz. 
-Önce Ana dizine dönüyyoruz.
-```
-cd
-```
+
 * Screen'imizin içine giriyoruz.
 ```
 screen -r juneo
@@ -75,6 +72,12 @@ Ctrl C ile durduruyoruz.
 Sonrasında Ctrl A+D ile screenden çıkıyoruz.
 
 ### Node Konfigürasyonunu Güncelleme
+
+* Ana dizine dönüyoruz.(config.json dosyası ana dizinde oluşturulacak)
+
+```
+cd 
+```
 
 ```
 nano config.json
