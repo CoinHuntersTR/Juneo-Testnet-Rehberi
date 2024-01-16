@@ -57,7 +57,9 @@ mv ~/juneogo-binaries/plugins/srEr2XGGtowDVNQ6YgXcdUb16FGknssLTGUFYg7iMqESJ4h8e 
 ```
 
 ### Yeni bir Screen açıyoruz.
-
+```
+sudo apt install screen
+```
 ```
 screen -S juneo
 ```
