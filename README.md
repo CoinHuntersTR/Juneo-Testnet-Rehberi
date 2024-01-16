@@ -62,7 +62,7 @@ mv ~/juneogo-binaries/plugins/srEr2XGGtowDVNQ6YgXcdUb16FGknssLTGUFYg7iMqESJ4h8e 
 screen -S juneo
 ```
 ```
-./juneogo &
+./juneogo
 ```
 ### Loglar akmaya başladığında Ctrl A+D ile çıkıyoruz.
 
