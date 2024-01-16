@@ -110,8 +110,17 @@ Bundan sonra eğer validator olarak seçildiyseniz size özel oluşturulan Teleg
 
 # Validator Çalıştırma
 
-* Test tokenlerini ekipten temin ettikten sonra
+* Test tokenlerini ekipten temin ettikten sonra JUNE Chainden P Chaine JUNE geçiriyoruz. Cüzdanda soldaki Cross chain bölümünden yapabilirsiniz.
+* Sonra Stake bölümüne geliyoruz.
 
   ![image](https://840243940-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FspM3Ad3lkZXu7Y9fdc1P%2Fuploads%2FOkpYyggv4s88b2tkb4zr%2Fimage.png?alt=media&token=764238b7-4912-4093-8c74-5366ec87adde)
+
+  * Miktarı seçiyoruz ve 15 gün süreyi seçip Validate basıyoruz.
+
+## Validator Kontrolü
+[BURADAN](https://mcnscan.io/validator/validator-list) Node-ID ile validatorümüzü kontrol ediyoruz. Aktif görünmesi gerekiyor.
+
+![image](https://840243940-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FspM3Ad3lkZXu7Y9fdc1P%2Fuploads%2F1LGz4feET3tnBqJymW84%2Fimage.png?alt=media&token=f711b370-7d33-42e5-b024-c0b8430d3315)
+
   
 
