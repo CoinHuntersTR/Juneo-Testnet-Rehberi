@@ -1,5 +1,10 @@
 # Deploy VM
 ### Gerekli güncelleme ve kurulumları yapıyoruz.
+
+```
+cd juneojs-examples
+```
+
 ```
 nano ./src/supernet/createChain.ts
 ```
