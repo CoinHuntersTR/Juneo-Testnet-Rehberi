@@ -113,7 +113,7 @@ Blockchain
 - Description: Bir açıklama ekleyebilirsiniz. 
 - Currency: Token sembolü büyük harf
 - Decimals: 18
-- Host: http://SOUNUCU IP ADRESİN:9650 
-- rpc: http://SOUNUCU IP ADRESİN:9650/ext/bc/chainID'nin üst bölümde aldık./rpc
+- Host: http://SUNUCU IP ADRESİN:9650 
+- rpc: http://SUNUCU IP ADRESİN:9650/ext/bc/chainID'nin üst bölümde aldık./rpc
 - Logo: buraya logoyu yüklediğin yerin linki
 - id: chain ID
