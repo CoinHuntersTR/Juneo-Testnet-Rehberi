@@ -1,68 +1,67 @@
-# Supernet Oluşturma
+# Deploy VM
 ### Gerekli güncelleme ve kurulumları yapıyoruz.
 ```
-sudo apt-get update -y && sudo apt-get upgrade -y
+nano ./src/supernet/createChain.ts
 ```
-```
-sudo apt install nodejs
-```
-```
-sudo apt install npm
-```
-```
-sudo apt install git
-```
-### Github dosyalarını indiriyoruz.
-```
-git clone https://github.com/Juneo-io/juneojs-examples
-```
-```
-cd juneojs-examples
-```
-```
-npm install
-```
-### Ayarlamaları yapıyoruz.
+* Aşağıdakileri dosya içinde bulup gerekli değişiklikleri yapıyoruz.
 
 ```
-nano .env
+const supernetId: string = 'suprnet ID adın ile değişecek' 
+
+const chainName: string = 'Burada ağın ismini veriyoruz.'
+
+const chainId: number = 330333 // 300,000 - 399,999 arasında bir sayı giriyoruz. birbirini takip eden sayılar girmeyin.
+
+const genesisMintAddress: string = '0x44542FD7C3F096aE54Cc07833b1C0Dcf68B7790C' // June Chain EVM adresiniz ile değişecek
+```
+```
+npx ts-node ./src/supernet/createChain.ts
+```
+Aşağıdakine benzer bir çıktı alacağız bunu bir yere not edelim.
+```
+Örnek çıktı: Created chain with id: 2LxhUB7z7yxvBkHiiwp8MrALgy7rka3y6MriL2JAeX858wUK5D
 ```
 
-```
-MNEMONIC="cüzdan gizli kelimeleri"
-```
-* Açtığımız env dosyası içine cüzdan gizli kelimelerimizi ekleyip Ctrl X ve Y basıp Enter yapıp devam ediyoruz.
 
-### Token Transferlerini gerçekleştiriyoruz.
 ```
-npx ts-node ./src/docs/crossJUNEtoJVM.ts
+cd .juneogo
 ```
 ```
-npx ts-node ./src/docs/crossJVMtoP.ts
+mkdir configs
 ```
-### Supernet Oluşturma
 ```
-npx ts-node ./src/supernet/createSupernet.ts
+cd configs
 ```
-* Bu komutun çıktısında bulunan supernetID'yi not alın. Çıktı Örneği: ZxTjijy4iNthRzuFFzMH5RS2BgJemYxwgZbzqzEhZJWqSnwh.
-
-### Supernet'e Validator Eklemek
 ```
-nano ./src/supernet/addSupernetValidator.ts
+mkdir chains
+```
+```
+cd chains
 ```
 
 ```
-const nodeId: string = 'Validatorünüzün Node-ID'si'
-const supernetId: string = 'Size çıkan supernetID'
-const durationInDays: number = 4 // number of days you will validate your Supernet
+mkdir "Yukarıda size verilen chain ID buraya gelecek"
 ```
-* Buradaki değişkenleri kendinize göre ayarlayıp Ctrl X Y enter yapın.
+* Örnek: mkdir 2LxhUB7z7yxvBkHiiwp8MrALgy7rka3y6MriL2JAeX858wUK5D
+```
+cd "Yukarıda size verilen chain ID buraya gelecek"
+```
+* Örnek: cd 2LxhUB7z7yxvBkHiiwp8MrALgy7rka3y6MriL2JAeX858wUK5D
+
 
 ```
-npx ts-node ./src/supernet/addSupernetValidator.ts
+nano config.json
+```
+* config dosyasını açtıktan sonra aşağıdaki komutu içine ekliyoruz. Ctrl X ve Y enter yapıyoruz.
+```
+{
+"pruning-enabled": false,
+  "eth-apis": ["public-eth", "public-eth-filter","net","web3","internal-public-eth","internal-public-blockchain","internal-public-transaction-pool","internal-public-debug","debug-tracer"]
+}
+"http-host":"Sunucunuzun IP adresi"
 ```
 
-### Node'muzu durduruyoruz. 
+### Node'muzu durduruyoruz.
 
 * Screen'imizin içine giriyoruz.
 ```
@@ -71,23 +70,6 @@ screen -r juneo
 Ctrl C ile durduruyoruz.
 Sonrasında Ctrl A+D ile screenden çıkıyoruz.
 
-### Node Konfigürasyonunu Güncelleme
-
-* Ana dizine dönüyoruz.(config.json dosyası ana dizinde oluşturulacak)
-
-```
-cd 
-```
-
-```
-nano config.json
-```
-```
-{
- "track-supernets":"supernetID adresiniz."
-}
-```
-* Bu düzenleme sonrasında ctrl X Y enter yapıyoruz.
 
 ### Node tekrar başlatıyoruz.
 
@@ -100,3 +82,38 @@ Tekrar başlatmak için aşağıdaki komutu giriyoruz.
 ./juneogo --config-file="./config.json"
 ```
 loglar akmaya başladığında Ctrl A + D ile çıkıyoruz. 
+
+### İşlemler bittikten sonra; Girdiğimiz telegram grubuna aşağıdaki komutu düzenleyip göndermemiz gerekiyor.
+```
+Supernet
+- Name
+- Description
+- id
+
+Blockchain
+- Name 
+- Description 
+- Currency (in ALL-CAPS format)
+- Decimals 
+- Host (http://xxx.xxx.xxx.xxx:9650 or with domain name) 
+- rpc (http://xxx.xxx.xxx.xxx:9650/ext/bc/id/rpc)
+- Logo (min 273x273 or greater.
+        In .png format. 
+        The width:height ratio should be 1:1)
+- id
+```
+Örnek;
+Supernet
+- Name: Supernet ABC
+- Description: This is a supernet created by
+- id: ZxTjijy4iNthRzuFFzMH5RS2BgJemYxwgZbzqzEhZJWqSnwhP
+
+Blockchain
+- Name: Ağa verdiğiniz isim
+- Description: Bir açıklama ekleyebilirsiniz. 
+- Currency: Token sembolü büyük harf
+- Decimals: 18
+- Host: http://SOUNUCU IP ADRESİN:9650 
+- rpc: http://SOUNUCU IP ADRESİN:9650/ext/bc/chainID'nin üst bölümde aldık./rpc
+- Logo: buraya logoyu yüklediğin yerin linki
+- id: chain ID
