@@ -111,7 +111,7 @@ Blockchain
 Supernet
 - Name: Supernet ABC
 - Description: This is a supernet created by
-- id: ZxTjijy4iNthRzuFFzMH5RS2BgJemYxwgZbzqzEhZJWqSnwhP
+- id: supernet ID
 
 Blockchain
 - Name: Ağa verdiğiniz isim
