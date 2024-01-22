@@ -77,7 +77,7 @@ nano config.json
 ```
 ```
 {
- "track-supernets":"supernetID adresiniz."
+ "track-supernets":"supernetID adresiniz.",
  "http-host":"IP ADRESIN"
 }
 
