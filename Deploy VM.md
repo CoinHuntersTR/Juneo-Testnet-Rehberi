@@ -63,7 +63,6 @@ nano config.json
 "pruning-enabled": false,
   "eth-apis": ["public-eth", "public-eth-filter","net","web3","internal-public-eth","internal-public-blockchain","internal-public-transaction-pool","internal-public-debug","debug-tracer"]
 }
-"http-host":"Sunucunuzun IP adresi"
 ```
 
 ### Node'muzu durduruyoruz.
