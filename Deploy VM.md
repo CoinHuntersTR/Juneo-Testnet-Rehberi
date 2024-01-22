@@ -78,8 +78,9 @@ nano config.json
 ```
 {
  "track-supernets":"supernetID adresiniz."
+ "http-host":"IP ADRESIN"
 }
-"http-host":"IP ADRESIN"
+
 ```
 * Bu düzenleme sonrasında ctrl X Y enter yapıyoruz.
 
