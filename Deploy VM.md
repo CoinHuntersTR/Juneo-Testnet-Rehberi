@@ -64,6 +64,25 @@ nano config.json
   "eth-apis": ["public-eth", "public-eth-filter","net","web3","internal-public-eth","internal-public-blockchain","internal-public-transaction-pool","internal-public-debug","debug-tracer"]
 }
 ```
+### Node Konfigürasyonunu Güncelleme
+
+* Ana dizine dönüyoruz.
+
+```
+cd 
+```
+
+```
+nano config.json
+```
+```
+{
+ "track-supernets":"supernetID adresiniz."
+}
+"http-host":"IP ADRESIN"
+```
+* Bu düzenleme sonrasında ctrl X Y enter yapıyoruz.
+
 
 ### Node'muzu durduruyoruz.
 
